@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Outfit:wght@300;400;500&display=swap');
+
+/* ── SECTION ── */
+.gl-section {
+  background: #faf7f2;
+  padding: 100px 40px;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ── HEADER ── */
+.gl-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gl-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c8834a;
+  margin-bottom: 16px;
+}
+
+.gl-label::before,
+.gl-label::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: #c8834a;
+  opacity: 0.5;
+}
+
+.gl-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 600;
+  color: #2c2417;
+  margin: 0 0 12px 0;
+  line-height: 1.1;
+}
+
+.gl-heading em {
+  font-style: italic;
+  color: #c8834a;
+}
+
+.gl-subtext {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(44, 36, 23, 0.5);
+  margin: 0;
+}
+
+/* ── CARDS GRID ── */
+.gl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── SINGLE CARD ── */
+.gl-card {
+  background: #ffffff;
+  border: 1px solid rgba(44, 36, 23, 0.07);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.gl-card:hover {
+  box-shadow: 0 16px 48px rgba(44, 36, 23, 0.1);
+  transform: translateY(-4px);
+}
+
+/* ── CARD IMAGE BOX ── */
+.gl-card-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.gl-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gl-card:hover .gl-card-img img {
+  transform: scale(1.06);
+}
+
+/* ── BADGE ── */
+.gl-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #2c2417;
+  color: #faf7f2;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  z-index: 2;
+}
+
+.gl-badge-hot {
+  background: #c8834a;
+  color: #fff;
+}
+
+.gl-badge-sale {
+  background: #b03a2e;
+  color: #fff;
+}
+
+/* ── ADD TO CART ── */
+.gl-card-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 3;
+}
+
+.gl-card:hover .gl-card-actions {
+  transform: translateY(0);
+}
+
+.gl-action-btn {
+  width: 100%;
+  background: #2c2417;
+  color: #faf7f2;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.gl-action-btn:hover {
+  background: #c8834a;
+}
+
+/* ── CARD INFO ── */
+.gl-card-info {
+  padding: 20px 20px 24px;
+  border-top: 1px solid rgba(44, 36, 23, 0.06);
+}
+
+.gl-card-category {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c8834a;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.gl-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c2417;
+  margin: 0 0 10px 0;
+}
+
+.gl-card-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c2417;
+  margin: 0;
+}
+
+.gl-card-price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gl-card-price-old {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(44, 36, 23, 0.35);
+  text-decoration: line-through;
+  margin: 0;
+}
+
+/* ── BOTTOM CTA ── */
+.gl-bottom {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.gl-btn {
+  background: transparent;
+  border: 1px solid rgba(44, 36, 23, 0.25);
+  color: #2c2417;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.25s ease;
+}
+
+.gl-btn:hover {
+  background: #c8834a;
+  border-color: #c8834a;
+  color: #fff;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .gl-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .gl-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gl-section {
+    padding: 60px 20px;
+  }
+
+  .gl-card-actions {
+    transform: translateY(0);
+  }
+
+  .gl-btn {
+    width: 100%;
+  }
+}
