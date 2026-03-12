@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap');
+
+/* ── ROOT ── */
+.footer-root {
+  background: #faf7f2;
+  color: #2c2417;
+  font-family: 'Outfit', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient glow top-left */
+.footer-root::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -60px;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(200,131,74,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── INNER CONTAINER ── */
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 40px 50px;
+}
+
+/* ── MAIN FLEX ROW ── */
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(44, 36, 23, 0.1);
+  padding-bottom: 48px;
+}
+
+/* ── LEFT — BRAND ── */
+.footer-brand {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-brand img {
+  width: 64px !important;
+  height: 64px !important;
+  object-fit: contain;
+  margin: 0 0 16px 0 !important;
+  opacity: 0.9;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #2c2417;
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(44, 36, 23, 0.5);
+  line-height: 1.8;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 220px;
+}
+
+/* ── RIGHT — LINKS + CONTACT ── */
+.footer-right {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* Quick Links & Contact headings */
+.vaibhav h5,
+.footer-col h5 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: #c8834a;
+  margin: 0 0 20px 0 !important;
+}
+
+.vaibhav br,
+.footer-col br {
+  display: none;
+}
+
+.vaibhav ul,
+.footer-col ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Nav link text — dark */
+.vaibhav ul li a {
+  color: rgba(44, 36, 23, 0.55);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  position: relative;
+}
+
+.vaibhav ul li a:hover {
+  color: #2c2417;
+  padding-left: 6px;
+}
+
+/* Contact column text — dark */
+.footer-col ul li {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(44, 36, 23, 0.55);
+  line-height: 1.7;
+}
+
+/* ── BOTTOM BAR ── */
+.footer-bottom {
+  text-align: center;
+  padding: 18px 40px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: rgba(44, 36, 23, 0.35);
+  background: rgba(44, 36, 23, 0.04);
+  border-top: 1px solid rgba(44, 36, 23, 0.08);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    flex: unset;
+    width: 100%;
+  }
+
+  .footer-right {
+    gap: 40px;
+    width: 100%;
+  }
+
+  .footer-inner {
+    padding: 50px 24px 36px;
+  }
+
+  .footer-bottom {
+    padding: 16px 24px;
+  }
+}

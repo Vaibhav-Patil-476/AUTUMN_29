@@ -1,0 +1,181 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Outfit:wght@300;400;500&display=swap');
+
+        .lg-section {
+          background: #1a1208;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Outfit', sans-serif;
+          padding: 40px 20px;
+        }
+
+        .lg-card {
+          background: #2e1f0e;
+          border-top: 3px solid #c8834a;
+          border-radius: 0;
+          padding: 52px 48px;
+          width: 100%;
+          max-width: 420px;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .lg-logo {
+          text-align: center;
+          margin-bottom: 32px;
+        }
+
+        .lg-logo-name {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 30px;
+          font-weight: 600;
+          color: #faf7f2;
+        }
+
+        .lg-logo-name em {
+          font-style: italic;
+          color: #c8834a;
+        }
+
+        .lg-logo-sub {
+          font-size: 10px;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: rgba(250,247,242,0.3);
+          display: block;
+          margin-top: 6px;
+        }
+
+        .lg-divider {
+          width: 40px;
+          height: 1px;
+          background: #c8834a;
+          opacity: 0.4;
+          margin: 0 auto 28px;
+        }
+
+        .lg-heading {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 28px;
+          font-weight: 600;
+          color: #faf7f2;
+          margin: 0 0 6px 0;
+          text-align: center;
+        }
+
+        .lg-subtext {
+          font-size: 13px;
+          font-weight: 300;
+          color: rgba(250,247,242,0.35);
+          text-align: center;
+          margin: 0 0 28px 0;
+        }
+
+        .lg-form {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .lg-field {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+        }
+
+        .lg-field label {
+          font-size: 10px;
+          font-weight: 500;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: rgba(250,247,242,0.4);
+        }
+
+        .lg-input {
+          background: #1a1208;
+          border: 1.5px solid rgba(200,131,74,0.2);
+          border-left: 3px solid #c8834a;
+          border-radius: 0;
+          padding: 13px 16px;
+          color: #faf7f2;
+          font-family: 'Outfit', sans-serif;
+          font-size: 14px;
+          font-weight: 300;
+          outline: none;
+          width: 100%;
+          box-sizing: border-box;
+          transition: all 0.2s;
+        }
+
+        .lg-input::placeholder {
+          color: rgba(250,247,242,0.2);
+        }
+
+        .lg-input:focus {
+          border-color: #c8834a;
+          border-left: 4px solid #c8834a;
+        }
+
+        .lg-forgot {
+          text-align: right;
+          font-size: 12px;
+          color: #c8834a;
+          cursor: pointer;
+          margin-top: -4px;
+          background: none;
+          border: none;
+          font-family: 'Outfit', sans-serif;
+          padding: 0;
+        }
+
+        .lg-btn {
+          background: #c8834a;
+          color: #1a1208;
+          border: none;
+          font-family: 'Outfit', sans-serif;
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          padding: 15px;
+          cursor: pointer;
+          margin-top: 6px;
+          transition: background 0.25s;
+          width: 100%;
+          border-radius: 0;
+        }
+
+        .lg-btn:hover {
+          background: #b5703a;
+        }
+
+        .lg-bottom {
+          text-align: center;
+          margin-top: 28px;
+          font-size: 13px;
+          color: rgba(250,247,242,0.35);
+          font-weight: 300;
+        }
+
+        .lg-link {
+          color: #c8834a;
+          cursor: pointer;
+          font-weight: 400;
+          background: none;
+          border: none;
+          font-family: 'Outfit', sans-serif;
+          font-size: 13px;
+          padding: 0;
+          margin-left: 4px;
+          text-decoration: underline;
+        }
+
+        .lg-link:hover {
+          color: #e09a62;
+        }
+
+        @media (max-width: 480px) {
+          .lg-card { padding: 36px 22px; }
+        }
+      

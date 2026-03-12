@@ -9,17 +9,6 @@ lerna-debug.log*
 
 node_modules
 
-Footer.css
-Header.css
-Service.css
-Login.css
-Signup.css
-Footer.jsx
-Header.jsx
-Service.jsx
-Contact.jsx
-Login.jsx
-Sigup.jsx
 dist
 dist-ssr
 *.local
