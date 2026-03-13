@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../cssComponents/Login.css"
 
 export default function Login() {
   const navigate = useNavigate();

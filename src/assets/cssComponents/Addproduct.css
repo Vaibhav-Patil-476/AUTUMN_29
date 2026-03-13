@@ -1,0 +1,65 @@
+.product-form-container{
+background:#f4ead8;
+padding:25px;
+border-radius:6px;
+}
+
+.product-form-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+/* Form Fields */
+
+.form-group{
+display:flex;
+flex-direction:column;
+}
+
+.form-group label{
+font-size:14px;
+margin-bottom:6px;
+font-weight:500;
+}
+
+.form-group input,
+.form-group textarea{
+padding:10px;
+border:1px solid #100f0e;
+border-radius:4px;
+font-size:14px;
+}
+
+.form-group textarea{
+height:100px;
+resize:none;
+}
+
+/* Full width fields */
+
+.full-width{
+grid-column:span 2;
+}
+
+/* Submit button */
+
+.submit-btn{
+background: #c8834a;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:4px;
+cursor:pointer;
+width:120px;
+}
+
+.submit-btn:hover{
+background:#d28b07;
+
+}
+
+.submit-btn{
+    color: #252220;
+    
+}

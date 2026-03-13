@@ -3,14 +3,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './assets/components/Home'
 import About from './assets/components/About'
 import Service from './assets/components/Service'
-
 import Header from './assets/components/Header'
 import Footer from './assets/components/Footer'
-
 import Login from './assets/components/Login'
 import Signup from './assets/components/Signup'
 import Contact from './assets/components/Contact'
 import Gallery from './assets/components/Gallery'
+import AdminLogin from './assets/components/AdminLogin'
+import AdminDashboard from './assets/components/AdminDashbord'
+import AllProducts from './assets/components/Allproducts'
+import AddProduct from './assets/components/Addproduct'
+
 
 
 function App() {
@@ -27,8 +30,14 @@ function App() {
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/signup' element={<Signup/>}/>
-
+    <Route path='/adminlogin' element={<AdminLogin/>}/>
+    <Route path='/admindashbord' element={<AdminDashboard/>}/>
+    <Route path='/allproducts' element={<AllProducts/>}/>
+    <Route path='/addproduct' element={<AddProduct/>}/>
     
+
+
+
 
    </Routes>
    <Footer/>

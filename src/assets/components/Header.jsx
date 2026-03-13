@@ -37,6 +37,16 @@ function Header() {
                 <Link to="/gallery" className="nav-link">GALLERY</Link>
               </li>
 
+              <li className="nav-item">
+                <Link to="/service" className="nav-link">SERVICE</Link>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/contact" className="nav-link">CONTACT</Link>
+              </li>
+              <li className="nav-item1">
+                <Link to="/login" className="nav-link">LOGIN</Link>
+              </li>
               {/* CENTER LOGO */}
               <li className="nav-item">
                 <Link to="/" className="navbar-brand text-center">
@@ -51,16 +61,20 @@ function Header() {
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link to="/service" className="nav-link">SERVICE</Link>
+              <li className="nav-item1">
+                <Link to="/adminlogin" className="nav-link">ADMIN LOGIN</Link>
+              </li>
+              <li className="nav-item1">
+                <Link to="/admindashbord" className="nav-link">ADMIN DashBord</Link>
+              </li>
+              <li className="nav-item1">
+                <Link to="/allproducts" className="nav-link">All Products</Link>
               </li>
 
-              <li className="nav-item">
-                <Link to="/contact" className="nav-link">CONTACT</Link>
+              <li className="nav-item1">
+                <Link to="/addproduct" className="nav-link">Add Products</Link>
               </li>
-              <li className="nav-item">
-                <Link to="/login" className="nav-link">LOGIN</Link>
-              </li>
+
 
             </ul>
 
