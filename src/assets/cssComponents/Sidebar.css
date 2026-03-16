@@ -1,0 +1,122 @@
+/* sidebar.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Outfit:wght@300;400;500&display=swap');
+
+/* Row */
+.row {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Sidebar Column */
+.col-3 {
+  padding: 0;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+/* Sidebar Nav */
+.sidebar {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5dfc0;
+  padding-top: 30px;
+}
+
+/* Logo Area */
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 0 20px 20px;
+  border-bottom: 2px solid #d4956a;
+}
+
+.sidebar-logo h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2c1a0e;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* List Group */
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px;
+  margin-top: 10px;
+}
+
+/* Each Link */
+.list-group-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  color: #2c1a0e;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #d4956a;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  border-radius: 2px;
+  margin-bottom: 2px;
+}
+
+/* Hover */
+.list-group-item:hover {
+  color: #f5dfc0;
+  background: #2c1a0e;
+  padding-left: 18px;
+}
+
+/* Active */
+.list-group-item.active {
+  color: #f5dfc0;
+  font-weight: 500;
+  background: #2c1a0e;
+  border-left: 3px solid #d4956a;
+}
+
+/* Icon */
+.list-group-item i {
+  font-size: 13px;
+  width: 18px;
+  margin-right: 12px;
+  color: #6f3d1f;
+}
+
+/* Main Content Column */
+.col-9 {
+  flex: 1;
+  padding: 40px;
+  background: #faf7f2;
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+}/* Each Link */
+.list-group-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  color: #2c1a0e;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #d4956a;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  border-radius: 2px;
+  margin-bottom: 8px;   /* 👈 space between each item */
+}

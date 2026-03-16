@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../cssComponents/Allproduct.css"
 import axios from "axios";
+import { Link } from "react-router-dom";
+
+
 function AllProducts() {
+
 
   const [getdata, setdata] = useState([]);
 
@@ -17,6 +21,9 @@ function AllProducts() {
     handlechnage();
   }, []);
 
+
+
+
   function handledelete(id) {
     let confirm = window.confirm("Are you sure you want to delete this product?");
 
@@ -27,12 +34,19 @@ function AllProducts() {
     axios.delete("https://69ad35d1b50a169ec87ee5ed.mockapi.io/clothes/" + id)
       .then((res) => {
         console.log(res.data);
-  
+
         handlechnage();
       }).catch((err) => {
         console.log(err);
       })
 
+  }
+
+  function handleupdate(id){
+    axios.put("https://69ad35d1b50a169ec87ee5ed.mockapi.io/clothes/" + id)
+    .then((rev)=>{
+      console.log(rev.product);
+    })
   }
 
 
@@ -80,7 +94,8 @@ function AllProducts() {
                       />
                     </td>
                     <td>
-                      <button className="admin-btn me-5">Edit</button>
+                      <Link to={"/admin/addproduct/" + item.id}
+                        className="admin-btn me-5">Edit</Link>
                       <button onClick={() => handledelete(item.id)} className="admin-btn">Delete</button>
                     </td>
                   </tr>

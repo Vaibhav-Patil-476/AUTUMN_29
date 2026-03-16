@@ -60,24 +60,10 @@ function Header() {
                   <span className="fw-bold d-block">AUTUMN_29</span>
                 </Link>
               </li>
-
               <li className="nav-item1">
                 <Link to="/adminlogin" className="nav-link">ADMIN LOGIN</Link>
               </li>
-              <li className="nav-item1">
-                <Link to="/admindashbord" className="nav-link">ADMIN DashBord</Link>
-              </li>
-              <li className="nav-item1">
-                <Link to="/allproducts" className="nav-link">All Products</Link>
-              </li>
-
-              <li className="nav-item1">
-                <Link to="/addproduct" className="nav-link">Add Products</Link>
-              </li>
-
-
             </ul>
-
           </div>
         </div>
       </nav>

@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../cssComponents/Login.css";
+import { useNavigate } from "react-router-dom";
 
 function AdminLogin() {
 
+  const [username, setusername] = useState("");
+  const [password, setpassword] = useState("");
+
+  let navigat = useNavigate();
+
+  function handlelogin(e) {
+    e.preventDefault();
+
+    if (username === "admin" && password === "admin") {
+      navigat("/admin");
+    }
+  }
   return (
     <section className="lg-section">
 
@@ -24,23 +37,23 @@ function AdminLogin() {
 
           <div className="lg-field">
             <label>Admin Email</label>
-            <input
+            <input value={username} onChange={(e)=>setusername(e.target.value)}
               className="lg-input"
-              type="email"
+              type="text"
               placeholder="admin@example.com"
             />
           </div>
 
           <div className="lg-field">
             <label>Password</label>
-            <input
+            <input value={password} onChange={(e)=>setpassword(e.target.value)}
               className="lg-input"
               type="password"
               placeholder="Enter admin password"
             />
           </div>
 
-          <button className="lg-btn">
+          <button onClick={handlelogin} className="lg-btn">
             Login →
           </button>
 

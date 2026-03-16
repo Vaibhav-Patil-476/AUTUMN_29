@@ -13,6 +13,7 @@ import AdminLogin from './assets/components/AdminLogin'
 import AdminDashboard from './assets/components/AdminDashbord'
 import AllProducts from './assets/components/Allproducts'
 import AddProduct from './assets/components/Addproduct'
+import Sidebar from './assets/components/Sidebar'
 
 
 
@@ -23,6 +24,7 @@ function App() {
    <BrowserRouter>
    <Header/>
    <Routes>
+    {/* //Normal Routing */}
     <Route path='/' element={<Home/>}/>
     <Route path='/about' element={<About/>}/>
     <Route path='/gallery' element={<Gallery/>}/>
@@ -31,14 +33,14 @@ function App() {
     <Route path='/login' element={<Login/>}/>
     <Route path='/signup' element={<Signup/>}/>
     <Route path='/adminlogin' element={<AdminLogin/>}/>
-    <Route path='/admindashbord' element={<AdminDashboard/>}/>
-    <Route path='/allproducts' element={<AllProducts/>}/>
-    <Route path='/addproduct' element={<AddProduct/>}/>
-    
 
-
-
-
+    {/* //Nested Routing  */}
+    <Route path='/admin' element={<Sidebar/>}>
+    <Route index element={<AdminDashboard/>}/>
+    <Route path='/admin/addproduct' element={<AddProduct/>}/>
+    <Route path='/admin/addproduct/:id' element={<AddProduct/>}/>
+    <Route path='/admin/allproduct' element={<AllProducts/>}/>
+    </Route>
    </Routes>
    <Footer/>
    </BrowserRouter>
