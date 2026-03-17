@@ -42,12 +42,6 @@ function AllProducts() {
 
   }
 
-  function handleupdate(id){
-    axios.put("https://69ad35d1b50a169ec87ee5ed.mockapi.io/clothes/" + id)
-    .then((rev)=>{
-      console.log(rev.product);
-    })
-  }
 
 
   return (

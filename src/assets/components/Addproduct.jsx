@@ -5,6 +5,8 @@ import axios from "axios";
 
 function AddProduct() {
 
+
+  // let { id } = useParams()
   const [id, setId] = useState(undefined);
 
   const [product, setproduct] = useState({
@@ -27,10 +29,7 @@ function AddProduct() {
         })
     }
 
-
-
-
-  function handlechange(e) {
+    function handlechange(e) {
     setproduct({ ...product, [e.target.id]: e.target.value });
   };
 
