@@ -1,0 +1,6 @@
+.navbar-nav .nav-item1 .nav-link:hover::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #c8834a;
+}
