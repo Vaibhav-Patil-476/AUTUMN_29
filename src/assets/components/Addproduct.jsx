@@ -1,33 +1,39 @@
 import React, { useEffect, useState } from "react";
 import "../cssComponents/Addproduct.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 function AddProduct() {
 
+  let navigate=useNavigate();
 
-  // let { id } = useParams()
-  const [id, setId] = useState(undefined);
+  let { id } = useParams()
+  // const [id, setId] = useState(undefined);
 
   const [product, setproduct] = useState({
     productname: "",
-    catogory: "",
+    category: "",
     price: "",
-    stock: ""
+    stock: "",
+    image:""
   })
- 
-    if (id) {
-      setId(id);
-      axios.get("https://69ad35d1b50a169ec87ee5ed.mockapi.io/clothes/" + id)
-        .then((e) => {
-          setproduct({
-            productname: e.product.productname,
-            catogory: e.product.catogory,
-            price: e.product.price,
-            stock: e.product.stock
-          })
-        })
-    }
+ useEffect(()=>{
+   if (id) {
+     // setId(id);
+     axios.get("https://69ad35d1b50a169ec87ee5ed.mockapi.io/clothes/" + id)
+       .then((e) => {
+         console.log(e)
+         setproduct({
+           productname: e.data.productname,
+           category: e.data.category,
+           price: e.data.price,
+           stock: e.data.stock,
+           image:e.data.image
+         })
+       })
+   }
+
+ },[])
 
     function handlechange(e) {
     setproduct({ ...product, [e.target.id]: e.target.value });
@@ -45,24 +51,27 @@ function AddProduct() {
 
       setproduct({
         productname: "",
-        catogory: "",
+        category: "",
         price: "",
-        stock: ""
+        stock: "",
+        image:""
       })
     }else{
       axios.put("https://69ad35d1b50a169ec87ee5ed.mockapi.io/clothes/"+id,product)
       .then((e)=>{
         console.log(e.product);
+        navigate("/admin/allproduct")
         alert("Product Update Successfully....");
-        setId(undefined);
+       
       }).catch((e)=>{
         console.log(e);
       });
         setproduct({
         productname: "",
-        catogory: "",
+        category: "",
         price: "",
-        stock: ""
+        stock: "",
+        image:""
       })
     }
     
@@ -86,7 +95,7 @@ function AddProduct() {
 
             <div className="form-group">
               <label>Category</label>
-              <input value={product.catogory} onChange={handlechange} id="catogory" type="text" placeholder="Category" />
+              <input value={product.category} onChange={handlechange} id="category" type="text" placeholder="Category" />
             </div>
 
             <div className="form-group">
@@ -94,16 +103,17 @@ function AddProduct() {
               <input value={product.price} onChange={handlechange} id="price" type="number" placeholder="Price" />
             </div>
 
+           
             <div className="form-group">
               <label>Stock</label>
               <input value={product.stock} onChange={handlechange} id="stock" type="number" placeholder="Stock quantity" />
             </div>
-
-            <div className="form-group  ">
+             <div className="form-group">
               <label>Upload Image</label>
-              <input type="file" />
+              <input value={product.image} onChange={handlechange} id="image" type="text" placeholder="Stock quantity" />
             </div>
 
+            
           </form>
 
           <div className="text-center mt-3">

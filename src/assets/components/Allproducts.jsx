@@ -75,10 +75,10 @@ function AllProducts() {
 
                   <tr key={i}>
                     <td>{i + 1}</td>
-                    <td>{item.name}</td>
+                    <td>{item.productname}</td>
                     <td>{item.category}</td>
+                    <td>{item.stock}</td>
                     <td>{item.price}</td>
-                    <td>{item.brand}</td>
                     <td>
                       <img
                         src={item.image}

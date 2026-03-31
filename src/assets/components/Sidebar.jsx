@@ -26,6 +26,11 @@ function Sidebar() {
                 <span>ALL PRODUCTS</span>
               </Link>
 
+                <Link to="/adminlogin" className="list-group-item list-group-item-action py-2 ripple">
+                <i className="fas fa-users fa-fw me-3"></i>
+                <span>Log Out</span>
+              </Link>
+
             </div>
           </div>
         </nav>
